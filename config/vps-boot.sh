@@ -33,18 +33,19 @@ apt-get install \
     ca-certificates \
     curl \
     gnupg-agent \
-    software-properties-common
+    software-properties-common -y
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
    $(lsb_release -cs) \
    stable"
 apt-get update
-apt-get install docker-ce docker-ce-cli containerd.io #install docker engine
-apt-cache madison docker-ce # list docker installed
+apt-get install docker-ce docker-ce-cli containerd.io #install docker engine -y
+apt-cache madison docker-ce # list docker version
 
 #add user to docker group -> https://docs.docker.com/engine/install/linux-postinstall/
 su ka
+cd ~
 sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker # active
