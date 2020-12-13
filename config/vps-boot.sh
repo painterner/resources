@@ -50,3 +50,4 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker # active
 docker run hello-world
+sudo apt install docker-compose
