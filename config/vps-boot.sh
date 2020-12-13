@@ -7,6 +7,8 @@ passwd
 apt update
 apt upgrade
 
+apt install vim
+
 echo 'PTBOOT: adding a new user'
 adduser ka
 echo "PTBOOT: adding ka to sudoers"
