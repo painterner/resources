@@ -40,7 +40,7 @@ add-apt-repository \
    $(lsb_release -cs) \
    stable"
 apt-get update
-apt-get install docker-ce docker-ce-cli containerd.io #install docker engine -y
+apt-get install docker-ce docker-ce-cli containerd.io -y #install docker engine
 apt-cache madison docker-ce # list docker version
 
 #add user to docker group -> https://docs.docker.com/engine/install/linux-postinstall/
