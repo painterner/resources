@@ -70,7 +70,11 @@ sudo dpkg -i minikube_latest_amd64.deb
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
+## homebrew
 sudo snap install helm
 sudo apt install linuxbrew-wrapper
 echo export PATH='$PATH:/home/linuxbrew/.linuxbrew/bin' >> ~/.bashrc
 export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
+
+## java11
+sudo apt install openjdk-11-jdk -y
