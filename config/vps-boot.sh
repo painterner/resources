@@ -69,3 +69,8 @@ sudo dpkg -i minikube_latest_amd64.deb
 ## fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
+
+sudo snap install helm
+sudo apt install linuxbrew-wrapper
+echo export PATH='$PATH:/home/linuxbrew/.linuxbrew/bin' >> ~/.bashrc
+export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
