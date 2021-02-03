@@ -5,7 +5,7 @@ echo 'PTBOOT: please input you password'
 passwd
 
 apt update
-apt upgrade
+apt upgrade -y
 
 apt install vim -y
 
