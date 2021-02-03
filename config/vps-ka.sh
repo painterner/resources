@@ -1,5 +1,4 @@
 #add user to docker group -> https://docs.docker.com/engine/install/linux-postinstall/
-su ka
 cd ~
 sudo groupadd docker
 sudo usermod -aG docker $USER
