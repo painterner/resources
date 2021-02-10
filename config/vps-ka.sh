@@ -1,8 +1,8 @@
 #add user to docker group -> https://docs.docker.com/engine/install/linux-postinstall/
 cd ~
-sudo groupadd docker
-sudo usermod -aG docker $USER
-newgrp docker # active
+# sudo groupadd docker
+# sudo usermod -aG docker $USER
+# newgrp docker # active
 docker run hello-world
 ## docker-compose
 sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
