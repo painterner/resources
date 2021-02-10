@@ -43,8 +43,8 @@ apt-get update
 apt-get install docker-ce docker-ce-cli containerd.io -y #install docker engine
 apt-cache madison docker-ce # list docker version
 
-# #add user to docker group -> https://docs.docker.com/engine/install/linux-postinstall/
-# su ka
+#add user to docker group -> https://docs.docker.com/engine/install/linux-postinstall/
+su ka
 # cd ~
 # sudo groupadd docker
 # sudo usermod -aG docker $USER
