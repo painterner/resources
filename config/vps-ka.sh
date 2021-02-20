@@ -32,3 +32,5 @@ export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
 
 ## java11
 sudo apt install openjdk-11-jdk -y
+
+sudo apt install tmux
