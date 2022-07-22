@@ -1,0 +1,2 @@
+1. The app is used to test to cnnect to remote host by ssh protocol, and forward your data by remote host.
+2. Will not collect your host name and password or any other user information.
