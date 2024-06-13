@@ -1,0 +1,54 @@
+#!/bin/bash
+
+
+cmd=$1
+COMMAND="./$cmd -c $cmd.toml"
+PID_FILE="/tmp/$cmd.pid"
+
+start_service() {
+    if [ -f $PID_FILE ]; then
+        echo "Service is already running."
+    else
+        setsid $COMMAND & echo $! > $PID_FILE
+        echo "Service started."
+    fi
+}
+
+stop_service() {
+    if [ -f $PID_FILE ]; then
+        PID=$(cat $PID_FILE)
+        kill $PID && rm $PID_FILE
+        echo "Service stopped."
+    else
+        echo "Service is not running."
+    fi
+}
+
+status_service() {
+    if [ -f $PID_FILE ]; then
+        PID=$(cat $PID_FILE)
+        if ps -p $PID > /dev/null; then
+            echo "Service is running."
+        else
+            echo "Service is not running, but PID file exists."
+        fi
+    else
+        echo "Service is not running."
+    fi
+}
+
+case "$2" in
+    start)
+        start_service
+        ;;
+    stop)
+        stop_service
+        ;;
+    status)
+        status_service
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|status}"
+        exit 1
+        ;;
+esac
